@@ -34,7 +34,7 @@
 /sbin/iptables -A PREROUTING -f -j DROP
 /sbin/iptables -A PREROUTING -p tcp -j WHITELIST
 /sbin/iptables -A WHITELIST -i lo -j RETURN
-/sbin/iptables -A WHITELIST -p tcp -m tcp --dport 1369 -j RETURN
+/sbin/iptables -A WHITELIST -p tcp -m tcp --dport 22 -j RETURN
 /sbin/iptables -A WHITELIST -p tcp -m tcp --dport 80 -j RETURN
 /sbin/iptables -A WHITELIST -p tcp -m tcp --dport 443 -j RETURN
 /sbin/iptables -A WHITELIST -p tcp -m tcp --dport 25565 -j RETURN
