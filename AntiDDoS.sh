@@ -1,6 +1,7 @@
 /sbin/iptables -N PREROUTING
 /sbin/iptables -N WHITELIST
 /sbin/iptables -N SYN_FLOOD
+/sbin/iptables -N port-scanning
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp -m conntrack --ctstate NEW -m tcpmss ! --mss 536:65535 -j DROP
@@ -33,7 +34,7 @@
 /sbin/iptables -A PREROUTING -f -j DROP
 /sbin/iptables -A PREROUTING -p tcp -j WHITELIST
 /sbin/iptables -A WHITELIST -i lo -j RETURN
-/sbin/iptables -A WHITELIST -p tcp -m tcp --dport 22 -j RETURN
+/sbin/iptables -A WHITELIST -p tcp -m tcp --dport 1369 -j RETURN
 /sbin/iptables -A WHITELIST -p tcp -m tcp --dport 80 -j RETURN
 /sbin/iptables -A WHITELIST -p tcp -m tcp --dport 443 -j RETURN
 /sbin/iptables -A WHITELIST -p tcp -m tcp --dport 25565 -j RETURN
