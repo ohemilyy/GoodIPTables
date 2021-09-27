@@ -17,7 +17,7 @@ Other Linux Based Operating Systems:
 ```bash
 $ git clone https://github.com/ItzBunniYT/GoodIPTables.git
 $ cd GoodIPTables
-$ chmod a+x GoodIPTables-Ubuntu.sh
+$ chmod a+x GoodIPTables.sh
 $ ./GoodIPTables.sh
 ```
 
