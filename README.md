@@ -1,4 +1,4 @@
-# IPTables
+# IPTables [DO NOT USE Ubuntu Version  unless you want a broken firewall]
 
 ## What is this?
 A simple script to protect your Linux Machine from hackers!
